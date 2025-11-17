@@ -19,6 +19,9 @@ flowchart LR
     BQ --> BQREP
     BQREP --> BI
 
+    %% Force scaling notes to bottom by linking BI -> Scale (invisibly)
+    BI -.-> Scale
+
     %% Strategy Notes (Not connected to graph)
     subgraph Scale [Scaling Strategy]
         A["Phase 1: Initial Lift & Shift<br/>• Pandas in Cloud Run<br/>(current implementation)"]
