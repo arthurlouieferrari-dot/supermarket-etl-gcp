@@ -38,7 +38,6 @@ supermarket_etl_gcp/
 │
 ├── src/
 │   ├── extract_kaggle_data.py
-│   ├── explore_dataset.py
 │   └── transform_load_sqlite.py
 │
 ├── sql/
