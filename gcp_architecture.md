@@ -1,19 +1,20 @@
 ## 🏗️ GCP Architecture Diagram
 
 ```mermaid
-flowchart TB
-    CS[Cloud Scheduler\n(Cron Trigger)]
-    CR[Cloud Run Job\n(Python ETL - Pandas)]
-    SM[Secret Manager\n(API + BQ Credentials)]
-    RAW[Cloud Storage\nRaw Landing Zone]
-    BQ[BigQuery\nDim + Fact Tables]
-    BQREP[BigQuery Scheduled Query\nAnalytical Report]
-    BI[Looker Studio\nBI Dashboards]
+flowchart LR
+    CS[Cloud Scheduler<br/>Cron Trigger]
+    CR[Cloud Run Job<br/>Python ETL]
+    SM[Secret Manager]
+    RAW[Cloud Storage<br/>Raw Kaggle Files]
+    PROC[Cloud Storage<br/>Processed Files]
+    BQ[BigQuery<br/>Dim + Fact Tables]
+    BQREP[BigQuery Scheduled Query<br/>Analytical Report]
+    BI[Looker Studio / BI Tools]
 
-    %% Data Flow
     CS --> CR
     SM --> CR
     CR --> RAW
+    CR --> PROC
     CR --> BQ
     BQ --> BQREP
     BQREP --> BI
