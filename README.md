@@ -179,7 +179,7 @@ flowchart LR
     BI[Looker Studio / BI Tools]
 
     CS --> CR
-    CR <-- SM
+    SM --> CR
     CR --> RAW
     CR --> PROC
     CR --> BQ
