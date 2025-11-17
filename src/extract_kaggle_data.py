@@ -40,7 +40,7 @@ def download_kaggle_dataset():
         zip_ref.extractall(RAW_DATA_DIR)
         print(f"Extracted: {zip_ref.namelist()}")
 
-    print("\n✅ Dataset extraction complete.")
+    print("\n Dataset extraction complete.")
     print(f"Files are now available in: {RAW_DATA_DIR}")
 
 # ---------------------------------------------------------------------
