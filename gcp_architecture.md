@@ -1,3 +1,6 @@
+## 🏗️ GCP Architecture Diagram
+
+```mermaid
 flowchart TB
     CS[Cloud Scheduler<br/>Cron Trigger]
     CR[Cloud Run Job<br/>Python ETL (Pandas)]
@@ -21,3 +24,4 @@ flowchart TB
         B["Next Phase: ELT in BigQuery SQL (when data grows)"]
         C["Advanced Scale: Dataflow / Dataproc (if needed for large batch/stream)"]
     end
+```
