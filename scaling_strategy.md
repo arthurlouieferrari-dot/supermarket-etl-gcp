@@ -1,4 +1,3 @@
-## Scaling Strategy
 ```mermaid
     %% Strategy Notes (Not connected to graph)
     subgraph Scale [Scaling Strategy]
