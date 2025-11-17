@@ -179,7 +179,7 @@ flowchart LR
     BI[Looker Studio / BI Tools]
 
     CS --> CR
-    CR --> SM
+    CR <-- SM
     CR --> RAW
     CR --> PROC
     CR --> BQ
@@ -209,7 +209,6 @@ flowchart LR
 - SQLite (local)  
 - BigQuery (cloud design)  
 - Cloud Run, Cloud Scheduler, Secret Manager (cloud)  
-- Mermaid  
 - Looker Studio  
 
 ---
