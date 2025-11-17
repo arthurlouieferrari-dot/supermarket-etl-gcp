@@ -2,13 +2,13 @@
 
 ```mermaid
 flowchart TB
-    CS[Cloud Scheduler<br/>Cron Trigger]
-    CR[Cloud Run Job<br/>Python ETL (Pandas)]
-    SM[Secret Manager<br/>(API + BQ Credentials)]
-    RAW[Cloud Storage<br/>Raw Kaggle Files]
-    BQ[BigQuery<br/>Dim + Fact Tables]
-    BQREP[BigQuery Scheduled Query<br/>Analytical Report]
-    BI[Looker Studio / BI Tools]
+    CS[Cloud Scheduler\n(Cron Trigger)]
+    CR[Cloud Run Job\n(Python ETL - Pandas)]
+    SM[Secret Manager\n(API + BQ Credentials)]
+    RAW[Cloud Storage\nRaw Landing Zone]
+    BQ[BigQuery\nDim + Fact Tables]
+    BQREP[BigQuery Scheduled Query\nAnalytical Report]
+    BI[Looker Studio\nBI Dashboards]
 
     %% Data Flow
     CS --> CR
@@ -18,10 +18,10 @@ flowchart TB
     BQ --> BQREP
     BQREP --> BI
 
-    %% Scaling Strategy (Notes Only)
-    subgraph notes [Scalability Strategy]
-        A["Initial Lift & Shift: Pandas in Cloud Run (current)"]
-        B["Next Phase: ELT in BigQuery SQL (when data grows)"]
-        C["Advanced Scale: Dataflow / Dataproc (if needed for large batch/stream)"]
+    %% Strategy Notes (Not connected to graph)
+    subgraph Scale [Scaling Strategy]
+        A["Phase 1: Initial Lift & Shift\n• Pandas in Cloud Run\n(current implementation)"]
+        B["Phase 2: Scale in Warehouse\n• Transformations in BigQuery SQL"]
+        C["Phase 3: High Volume ETL\n• Dataflow / Dataproc for big/streaming jobs"]
     end
 ```
