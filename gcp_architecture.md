@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart LR
-    CS[Cloud Scheduler<br/>Cron Trigger
+    CS[Cloud Scheduler<br/>Cron Trigger]
     CR[Cloud Run Job<br/>Python ETL]
     SM[Secret Manager]
     RAW[Cloud Storage<br/>Raw Kaggle Files]
